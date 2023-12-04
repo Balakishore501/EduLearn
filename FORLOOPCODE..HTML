@@ -1,0 +1,49 @@
+var courses=new Array();
+var ccount=0;
+
+ courses[ccount]=course;
+ ccount++;
+ 
+ var clist="";
+ for(var i=0;i<courses.length;i++)
+  clist=clist+"\n"+courses[i];
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+function check()
+{
+  try{
+  var urlstring=window.location.search;
+  
+  var checkstr=urlstring.substring(1);
+  var splitarray= checkstr.split('&',2);
+  
+  var uname=splitarray[0].substring(splitarray[0].indexof('=')+1);
+  var pwd=splitarray[1].substring(splitarray[1].indexof('=')+1);
+  
+   if(uname=='bala' && pwd=='501')
+  {
+    alert("Dear Member, Welocome to Course Enrollments page");
+  }
+	else
+	{
+	  alert("You must login properly to access this page");
+	  window.location.href="login.html";
+	}
+}
+	catch(err)
+	{
+	alert("You must login properly to accesss to this page");
+	window.location.href="login.html";
+	}
+}
